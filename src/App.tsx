@@ -13,10 +13,16 @@ import Navbar from './components/Navbar/Navbar';
 import SavedInfoProvider from './context/SavedInfoProvider';
 import ApiContextProvider from './context/ApiContextProvider';
 
+//Global Style
+import GlobalStyle from './globalStyles';
+import TvPage from './pages/TvPage/TvPage';
+import PersonPage from './pages/PersonPage/PersonPage';
+
 function App() {
   return (
     <>
       <Router>
+        <GlobalStyle />
         <Navbar />
         <ApiContextProvider>
         <SavedInfoProvider>
@@ -25,6 +31,8 @@ function App() {
             <Route path='/watched' element={<Watched />} />
             <Route path='/wanttowatch' element={<WantToWatch />} />
             <Route path='/movie/:movieId' element={<MoviePage />} />
+            <Route path='/tv/:tvId' element={<TvPage />} />
+            <Route path='/person/:personId' element={<PersonPage />} />
           </Routes>
         </SavedInfoProvider>
         </ApiContextProvider>

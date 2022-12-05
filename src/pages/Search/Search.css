@@ -1,4 +1,0 @@
-.search_result {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-}

@@ -2,12 +2,9 @@ import styled from 'styled-components'
 
 const StyledSearch = styled.section`
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: red;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-row: auto;
 
-    .search_result {
-        
-    }
 `
 export default StyledSearch;

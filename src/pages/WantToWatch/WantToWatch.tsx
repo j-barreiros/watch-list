@@ -2,11 +2,17 @@ import React, { useContext } from 'react'
 import { SavedInfoContext } from '../../context/SavedInfoProvider'
 
 function WantToWatch() {
-    const {wantToWatch} = useContext(SavedInfoContext);
+    const { wantToWatch } = useContext(SavedInfoContext);
 
     return (
         <>
-            {wantToWatch.map(wtwItem => <p>{wtwItem.original_title}</p>)}
+            {console.log(wantToWatch)}
+            {wantToWatch.map(wtwItem => {
+                if(wtwItem.title == undefined) {
+                    return <p>{wtwItem.name}</p>
+                }
+                return <p>{wtwItem.title}</p>
+            })}
         </>
     )
 }
